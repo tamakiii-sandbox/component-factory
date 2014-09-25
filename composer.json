@@ -10,7 +10,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Concretehouse\\Component\\Factory\\": "src"
+            "Concretehouse\\Component\\Factory\\": "src",
+            "Concretehouse\\Dp\\Factory\\Concretes\\": "src"
         }
     },
     "require": {
