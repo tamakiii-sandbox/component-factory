@@ -1,6 +1,6 @@
 <?php
 
-namespace Concretehouse\Dp\Factory\Test\Providers;
+namespace Concretehouse\Component\Factory\Test\Providers;
 
 use Concretehouse\Dp\Factory\Providers\ServiceProvider;
 use Phake;

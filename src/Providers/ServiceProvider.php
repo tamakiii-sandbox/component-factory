@@ -1,6 +1,6 @@
 <?php
 
-namespace Concretehouse\Dp\Factory\Providers;
+namespace Concretehouse\Component\Factory\Providers;
 
 use Concretehouse\Dp\Factory\Concretes;
 
