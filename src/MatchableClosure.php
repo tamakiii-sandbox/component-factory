@@ -1,6 +1,6 @@
 <?php
 
-namespace Concretehouse\Dp\Factory\Concretes;
+namespace Concretehouse\Component\Factory;
 
 /**
  * Matchable factory with Closure.

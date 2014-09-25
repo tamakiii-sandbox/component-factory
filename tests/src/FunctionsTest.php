@@ -2,7 +2,7 @@
 
 namespace Concretehouse\Dp\Test\Concretes;
 
-use Concretehouse\Dp\Factory\Concretes\Functions;
+use Concretehouse\Component\Factory\Functions;
 use Phake;
 
 interface HInterface {}

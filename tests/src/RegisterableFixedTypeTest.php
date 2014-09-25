@@ -2,7 +2,7 @@
 
 namespace Concretehouse\Dp\Factory\Test\Concretes;
 
-use Concretehouse\Dp\Factory\Concretes\RegisterableFixedType;
+use Concretehouse\Component\Factory\RegisterableFixedType;
 use Concretehouse\Dp\Factory\FactoryInterface;
 use Concretehouse\Dp\Factory\FactoryInjectableInterface;
 use Phake;

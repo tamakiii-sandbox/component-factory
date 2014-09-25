@@ -1,6 +1,6 @@
 <?php
 
-namespace Concretehouse\Dp\Factory\Concretes;
+namespace Concretehouse\Component\Factory;
 
 use Concretehouse\Dp\Factory\FunctionsInterface;
 use Concretehouse\Dp\Factory\FixedTypeInterface;

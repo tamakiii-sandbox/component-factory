@@ -2,7 +2,7 @@
 
 namespace Concretehouse\Dp\Factory\Test\Concretes;
 
-use Concretehouse\Dp\Factory\Concretes\Registerable;
+use Concretehouse\Component\Factory\Registerable;
 use Phake;
 
 /**

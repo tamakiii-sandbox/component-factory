@@ -2,7 +2,7 @@
 
 namespace Concretehouse\Dp\Factory\Test\Concretes;
 
-use Concretehouse\Dp\Factory\Concretes\RegisterableFactoryInjectable;
+use Concretehouse\Component\Factory\RegisterableFactoryInjectable;
 use Concretehouse\Dp\Factory\MatchableInterface;
 use Concretehouse\Dp\Factory\FactoryInterface;
 use Phake;
@@ -68,7 +68,7 @@ class RegisterableFactoryInjectableTest extends \PHPUnit_Framework_TestCase
      */
     public function extendsRegisterable()
     {
-        $this->assertInstanceOf('Concretehouse\Dp\Factory\Concretes\Registerable', $this->factory);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\Registerable', $this->factory);
     }
 
     /**
