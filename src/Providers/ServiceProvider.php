@@ -22,12 +22,12 @@ class ServiceProvider implements \Pimple\ServiceProviderInterface
             return new Factory\Functions;
         };
 
-        $container["$domain.registerable"] = function($c) use ($domain) {
+        $container["$domain.registerable"] = $container->factory(function($c) use ($domain) {
             return new Factory\Registerable($c["$domain.functions"]);
-        };
+        });
 
-        $container["$domain.registerable_factory_injectable"] = function($c) use ($domain) {
+        $container["$domain.registerable_factory_injectable"] = $container->factory(function($c) use ($domain) {
             return new Factory\RegisterableFactoryInjectable($c["$domain.functions"]);
-        };
+        });
     }
 }

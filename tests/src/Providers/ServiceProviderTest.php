@@ -17,6 +17,10 @@ class ServiceProviderTest extends \PHPUnit_Framework_TestCase
     {
         $this->container = new \Pimple\Container;
         $this->provider = new ServiceProvider;
+
+        $this->domain = ServiceProvider::DOMAIN;
+
+        $this->provider->register($this->container);
     }
 
     /**
@@ -24,10 +28,8 @@ class ServiceProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function registersFunctions()
     {
-        $domain = ServiceProvider::DOMAIN;
-        $this->provider->register($this->container);
-        $this->assertInstanceOf('Concretehouse\Component\Factory\FunctionsInterface', $this->container["$domain.functions"]);
-        $this->assertInstanceOf('Concretehouse\Component\Factory\Functions', $this->container["$domain.functions"]);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\FunctionsInterface', $this->container["$this->domain.functions"]);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\Functions', $this->container["$this->domain.functions"]);
     }
 
     /**
@@ -35,10 +37,8 @@ class ServiceProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function registersRegisterable()
     {
-        $domain = ServiceProvider::DOMAIN;
-        $this->provider->register($this->container);
-        $this->assertInstanceOf('Concretehouse\Component\Factory\RegisterableInterface', $this->container["$domain.registerable"]);
-        $this->assertInstanceOf('Concretehouse\Component\Factory\Registerable', $this->container["$domain.registerable"]);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\RegisterableInterface', $this->container["$this->domain.registerable"]);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\Registerable', $this->container["$this->domain.registerable"]);
     }
 
     /**
@@ -46,10 +46,20 @@ class ServiceProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function registersRegisterableFactoryInjectable()
     {
-        $domain = ServiceProvider::DOMAIN;
-        $this->provider->register($this->container);
-        $this->assertInstanceOf('Concretehouse\Component\Factory\RegisterableInterface', $this->container["$domain.registerable_factory_injectable"]);
-        $this->assertInstanceOf('Concretehouse\Component\Factory\FactoryInjectableInterface', $this->container["$domain.registerable_factory_injectable"]);
-        $this->assertInstanceOf('Concretehouse\Component\Factory\RegisterableFactoryInjectable', $this->container["$domain.registerable_factory_injectable"]);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\RegisterableInterface', $this->container["$this->domain.registerable_factory_injectable"]);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\FactoryInjectableInterface', $this->container["$this->domain.registerable_factory_injectable"]);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\RegisterableFactoryInjectable', $this->container["$this->domain.registerable_factory_injectable"]);
+    }
+
+    /**
+     * @test
+     */
+    public function registerableIsNotSingleton()
+    {
+        $a = $this->container["$this->domain.registerable"];
+        $b = $this->container["$this->domain.registerable"];
+
+        $this->assertNotSame($a, $b);
+        $this->assertSame(get_class($a), get_class($b));
     }
 }
