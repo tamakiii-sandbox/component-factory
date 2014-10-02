@@ -1,10 +1,10 @@
 <?php
 
-namespace Concretehouse\Dp\Factory\Test\Concretes;
+namespace Concretehouse\Component\Factory\Test\Concretes;
 
 use Concretehouse\Component\Factory\RegisterableFixedType;
-use Concretehouse\Dp\Factory\FactoryInterface;
-use Concretehouse\Dp\Factory\FactoryInjectableInterface;
+use Concretehouse\Component\Factory\FactoryInterface;
+use Concretehouse\Component\Factory\FactoryInjectableInterface;
 use Phake;
 
 
@@ -18,17 +18,13 @@ class RegisterableFixedTypeTest extends \PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
-        $this->type = 'Concretehouse\Dp\Factory\FactoryInterface';
-        $this->functions = Phake::mock('Concretehouse\Dp\Factory\FunctionsInterface');
+        $this->type = 'Concretehouse\Component\Factory\FactoryInterface';
+        $this->functions = Phake::mock('Concretehouse\Component\Factory\FunctionsInterface');
 
         $this->list = array(
             'ok_1' => array(
                 'class' => 'FactoryInterface',
-                'mock' => Phake::mock('Concretehouse\Dp\Factory\FactoryInterface')
-            ),
-            'ok_2' => array(
-                'class' => 'FactoryInjectableInterface',
-                'mock' => Phake::mock('Concretehouse\Dp\Factory\FactoryInjectableInterface')
+                'mock' => Phake::mock('Concretehouse\Component\Factory\FactoryInterface')
             ),
             'ng_1' => array(
                 'class' => 'stdClass',
@@ -59,7 +55,6 @@ class RegisterableFixedTypeTest extends \PHPUnit_Framework_TestCase
     public function returnsSpecifiedTypeOfObject()
     {
         $this->assertSame($this->list['ok_1']['mock'], $this->factory->make('ok_1'));
-        $this->assertSame($this->list['ok_2']['mock'], $this->factory->make('ok_2'));
     }
 
     /**

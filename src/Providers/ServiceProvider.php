@@ -2,14 +2,14 @@
 
 namespace Concretehouse\Component\Factory\Providers;
 
-use Concretehouse\Dp\Factory\Concretes;
+use Concretehouse\Component\Factory;
 
 /**
  * Provides factory service.
  */
 class ServiceProvider implements \Pimple\ServiceProviderInterface
 {
-    const DOMAIN = 'concretehouse.dp.factory';
+    const DOMAIN = 'concretehouse.component.factory';
 
     /**
      * @param \Pimple\Container $container
@@ -19,15 +19,11 @@ class ServiceProvider implements \Pimple\ServiceProviderInterface
         $domain = self::DOMAIN;
 
         $container["$domain.functions"] = function($c) {
-            return new Concretes\Functions;
+            return new Factory\Functions;
         };
 
-        $container["$domain.registerable"] = function($c) use ($domain) {
-            return new Concretes\Registerable($c["$domain.functions"]);
-        };
-
-        $container["$domain.registerable_factory_injectable"] = function($c) use ($domain) {
-            return new Concretes\RegisterableFactoryInjectable($c["$domain.functions"]);
-        };
+        $container["$domain.registerable"] = $container->factory(function($c) use ($domain) {
+            return new Factory\Registerable($c["$domain.functions"]);
+        });
     }
 }

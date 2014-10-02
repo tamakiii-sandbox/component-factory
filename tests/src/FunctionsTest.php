@@ -1,6 +1,6 @@
 <?php
 
-namespace Concretehouse\Dp\Test\Concretes;
+namespace Concretehouse\Component\Test\Concretes;
 
 use Concretehouse\Component\Factory\Functions;
 use Phake;
@@ -29,7 +29,7 @@ class FunctionsClassTest extends \PHPUnit_Framework_TestCase
      */
     public function implementsFunctionsIF()
     {
-        $this->assertInstanceOf('Concretehouse\Dp\Factory\FunctionsInterface', $this->functions);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\FunctionsInterface', $this->functions);
     }
 
     /**

@@ -2,8 +2,8 @@
 
 namespace Concretehouse\Component\Factory;
 
-use Concretehouse\Dp\Factory\FactoryInterface;
-use Concretehouse\Dp\Factory\FunctionsInterface;
+use Concretehouse\Component\Factory\FactoryInterface;
+use Concretehouse\Component\Factory\FunctionsInterface;
 
 /**
  * Factory.

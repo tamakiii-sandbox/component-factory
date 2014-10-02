@@ -1,6 +1,6 @@
 <?php
 
-namespace Concretehouse\Dp\Factory\Test\Concretes;
+namespace Concretehouse\Component\Factory\Test\Concretes;
 
 use Concretehouse\Component\Factory\Registerable;
 use Phake;
@@ -18,7 +18,7 @@ class RegisterableTest extends \PHPUnit_Framework_TestCase
         $this->std = new \stdClass;
         $this->array = new \SplFixedArray(10);
 
-        $this->functions = Phake::mock('Concretehouse\Dp\Factory\FunctionsInterface');
+        $this->functions = Phake::mock('Concretehouse\Component\Factory\FunctionsInterface');
         $this->factory = new Registerable($this->functions);
 
         $this->factory->register('std', '\stdClass');
@@ -37,7 +37,7 @@ class RegisterableTest extends \PHPUnit_Framework_TestCase
      */
     public function implementsRegisterableInterface()
     {
-        $this->assertInstanceOf('Concretehouse\Dp\Factory\RegisterableInterface', $this->factory);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\RegisterableInterface', $this->factory);
     }
 
     /**

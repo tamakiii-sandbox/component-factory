@@ -2,7 +2,7 @@
 
 namespace Concretehouse\Component\Factory;
 
-use Concretehouse\Dp\Factory\FunctionsInterface;
+use Concretehouse\Component\Factory\FunctionsInterface;
 
 /**
  * Functions-class for factory.
