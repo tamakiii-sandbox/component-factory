@@ -9,7 +9,7 @@ use Concretehouse\Dp\Factory\Concretes;
  */
 class ServiceProvider implements \Pimple\ServiceProviderInterface
 {
-    const DOMAIN = 'concretehouse.dp.factory';
+    const DOMAIN = 'concretehouse.component.factory';
 
     /**
      * @param \Pimple\Container $container
