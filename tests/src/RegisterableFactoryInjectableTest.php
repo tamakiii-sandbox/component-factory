@@ -1,10 +1,10 @@
 <?php
 
-namespace Concretehouse\Dp\Factory\Test\Concretes;
+namespace Concretehouse\Component\Factory\Test\Concretes;
 
 use Concretehouse\Component\Factory\RegisterableFactoryInjectable;
-use Concretehouse\Dp\Factory\MatchableInterface;
-use Concretehouse\Dp\Factory\FactoryInterface;
+use Concretehouse\Component\Factory\MatchableInterface;
+use Concretehouse\Component\Factory\FactoryInterface;
 use Phake;
 
 interface MatchableFactoryInterface extends MatchableInterface, FactoryInterface {}
@@ -39,7 +39,7 @@ class RegisterableFactoryInjectableTest extends \PHPUnit_Framework_TestCase
         );
 
         // Prepare functions mock
-        $this->functions = Phake::mock('Concretehouse\Dp\Factory\FunctionsInterface');
+        $this->functions = Phake::mock('Concretehouse\Component\Factory\FunctionsInterface');
 
         // Prepare registerable factory-injectable factory
         $this->factory = new RegisterableFactoryInjectable($this->functions);
@@ -60,7 +60,7 @@ class RegisterableFactoryInjectableTest extends \PHPUnit_Framework_TestCase
      */
     public function implementsFactoryInjectableIF()
     {
-        $this->assertInstanceOf('Concretehouse\Dp\Factory\FactoryInjectableInterface', $this->factory);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\FactoryInjectableInterface', $this->factory);
     }
 
     /**
@@ -102,7 +102,7 @@ class RegisterableFactoryInjectableTest extends \PHPUnit_Framework_TestCase
     public function throwsExceptionIfNonFactoryInterfaceImplementedObjectSpecified()
     {
         $this->factory->addFactory(
-            Phake::mock('Concretehouse\Dp\Factory\MatchableInterface')
+            Phake::mock('Concretehouse\Component\Factory\MatchableInterface')
         );
     }
 

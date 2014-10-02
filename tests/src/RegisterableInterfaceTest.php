@@ -1,6 +1,6 @@
 <?php
 
-namespace Concretehouse\Dp\Factory\Test;
+namespace Concretehouse\Component\Factory\Test;
 
 use Phake;
 
@@ -14,6 +14,6 @@ class RegisterableInterfaceTest extends \PHPUnit_Framework_TestCase
      */
     public function canImplement()
     {
-        Phake::mock('Concretehouse\Dp\Factory\RegisterableInterface');
+        Phake::mock('Concretehouse\Component\Factory\RegisterableInterface');
     }
 }

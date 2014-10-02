@@ -2,7 +2,7 @@
 
 namespace Concretehouse\Component\Factory\Test\Providers;
 
-use Concretehouse\Dp\Factory\Providers\ServiceProvider;
+use Concretehouse\Component\Factory\Providers\ServiceProvider;
 use Phake;
 
 /**
@@ -26,8 +26,8 @@ class ServiceProviderTest extends \PHPUnit_Framework_TestCase
     {
         $domain = ServiceProvider::DOMAIN;
         $this->provider->register($this->container);
-        $this->assertInstanceOf('Concretehouse\Dp\Factory\FunctionsInterface', $this->container["$domain.functions"]);
-        $this->assertInstanceOf('Concretehouse\Dp\Factory\Concretes\Functions', $this->container["$domain.functions"]);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\FunctionsInterface', $this->container["$domain.functions"]);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\Functions', $this->container["$domain.functions"]);
     }
 
     /**
@@ -37,8 +37,8 @@ class ServiceProviderTest extends \PHPUnit_Framework_TestCase
     {
         $domain = ServiceProvider::DOMAIN;
         $this->provider->register($this->container);
-        $this->assertInstanceOf('Concretehouse\Dp\Factory\RegisterableInterface', $this->container["$domain.registerable"]);
-        $this->assertInstanceOf('Concretehouse\Dp\Factory\Concretes\Registerable', $this->container["$domain.registerable"]);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\RegisterableInterface', $this->container["$domain.registerable"]);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\Registerable', $this->container["$domain.registerable"]);
     }
 
     /**
@@ -48,8 +48,8 @@ class ServiceProviderTest extends \PHPUnit_Framework_TestCase
     {
         $domain = ServiceProvider::DOMAIN;
         $this->provider->register($this->container);
-        $this->assertInstanceOf('Concretehouse\Dp\Factory\RegisterableInterface', $this->container["$domain.registerable_factory_injectable"]);
-        $this->assertInstanceOf('Concretehouse\Dp\Factory\FactoryInjectableInterface', $this->container["$domain.registerable_factory_injectable"]);
-        $this->assertInstanceOf('Concretehouse\Dp\Factory\Concretes\RegisterableFactoryInjectable', $this->container["$domain.registerable_factory_injectable"]);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\RegisterableInterface', $this->container["$domain.registerable_factory_injectable"]);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\FactoryInjectableInterface', $this->container["$domain.registerable_factory_injectable"]);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\RegisterableFactoryInjectable', $this->container["$domain.registerable_factory_injectable"]);
     }
 }

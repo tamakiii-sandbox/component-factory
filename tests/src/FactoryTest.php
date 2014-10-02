@@ -1,6 +1,6 @@
 <?php
 
-namespace Concretehouse\Dp\Factory\Test\Concretes;
+namespace Concretehouse\Component\Factory\Test\Concretes;
 
 use Concretehouse\Component\Factory\Factory;
 use Phake;
@@ -15,7 +15,7 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
-        $this->functions = Phake::mock('Concretehouse\Dp\Factory\FunctionsInterface');
+        $this->functions = Phake::mock('Concretehouse\Component\Factory\FunctionsInterface');
         $this->factory = new Factory($this->functions);
     }
 

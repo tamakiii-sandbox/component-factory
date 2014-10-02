@@ -2,8 +2,8 @@
 
 namespace Concretehouse\Component\Factory;
 
-use Concretehouse\Dp\Factory\FunctionsInterface;
-use Concretehouse\Dp\Factory\FixedTypeInterface;
+use Concretehouse\Component\Factory\FunctionsInterface;
+use Concretehouse\Component\Factory\FixedTypeInterface;
 
 /**
  * Registerable fixed type factory.

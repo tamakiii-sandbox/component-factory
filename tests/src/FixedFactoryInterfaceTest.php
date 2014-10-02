@@ -1,6 +1,6 @@
 <?php
 
-namespace Concretehouse\Dp\Factory\Test;
+namespace Concretehouse\Component\Factory\Test;
 
 use Phake;
 
@@ -14,6 +14,6 @@ class FixedFactoryInterface extends \PHPUnit_Framework_TestCase
      */
     public function canImplement()
     {
-        Phake::mock('Concretehouse\Dp\Factory\FixedFactoryInterface');
+        Phake::mock('Concretehouse\Component\Factory\FixedFactoryInterface');
     }
 }

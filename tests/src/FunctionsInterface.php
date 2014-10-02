@@ -1,6 +1,6 @@
 <?php
 
-namespace Concretehouse\Dp\Test;
+namespace Concretehouse\Component\Test;
 
 use Phake;
 
@@ -14,6 +14,6 @@ class FunctionsInterfaceTest extends \PHPUnit_Framework_TestCase
      */
     public function canUse()
     {
-        Phake::mock('Concretehouse\Dp\Factory\FunctionsInterface');
+        Phake::mock('Concretehouse\Component\Factory\FunctionsInterface');
     }
 }

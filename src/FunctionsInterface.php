@@ -1,6 +1,6 @@
 <?php
 
-namespace Concretehouse\Dp\Factory;
+namespace Concretehouse\Component\Factory;
 
 /**
  * Functions-interface for factory.

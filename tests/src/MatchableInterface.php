@@ -1,6 +1,6 @@
 <?php
 
-namespace Concretehouse\Dp\Factory\Test;
+namespace Concretehouse\Component\Factory\Test;
 
 use Phake;
 
@@ -14,7 +14,7 @@ class MatchableInterfaceTest extends \PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
-        $this->matchable = Phake::mock('Concretehouse\Dp\Factory\MatchableInterface');
+        $this->matchable = Phake::mock('Concretehouse\Component\Factory\MatchableInterface');
     }
 
     /**
@@ -22,6 +22,6 @@ class MatchableInterfaceTest extends \PHPUnit_Framework_TestCase
      */
     public function implementsFactoryInterface()
     {
-        $this->assertInstanceOf('Concretehouse\Dp\Factory\FactoryInterface', $this->matchable);
+        $this->assertInstanceOf('Concretehouse\Component\Factory\FactoryInterface', $this->matchable);
     }
 }

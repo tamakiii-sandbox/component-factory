@@ -2,10 +2,10 @@
 
 namespace Concretehouse\Component\Factory;
 
-use Concretehouse\Dp\Factory\FactoryInterface;
-use Concretehouse\Dp\Factory\FunctionsInterface;
-use Concretehouse\Dp\Factory\MatchableInterface;
-use Concretehouse\Dp\Factory\FactoryInjectableInterface;
+use Concretehouse\Component\Factory\FactoryInterface;
+use Concretehouse\Component\Factory\FunctionsInterface;
+use Concretehouse\Component\Factory\MatchableInterface;
+use Concretehouse\Component\Factory\FactoryInjectableInterface;
 
 /**
  * Matcher-injectable registerable factory class.
