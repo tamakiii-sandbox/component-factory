@@ -44,16 +44,6 @@ class ServiceProviderTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function registersRegisterableFactoryInjectable()
-    {
-        $this->assertInstanceOf('Concretehouse\Component\Factory\RegisterableInterface', $this->container["$this->domain.registerable_factory_injectable"]);
-        $this->assertInstanceOf('Concretehouse\Component\Factory\FactoryInjectableInterface', $this->container["$this->domain.registerable_factory_injectable"]);
-        $this->assertInstanceOf('Concretehouse\Component\Factory\RegisterableFactoryInjectable', $this->container["$this->domain.registerable_factory_injectable"]);
-    }
-
-    /**
-     * @test
-     */
     public function registerableIsNotSingleton()
     {
         $a = $this->container["$this->domain.registerable"];

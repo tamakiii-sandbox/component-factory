@@ -26,10 +26,6 @@ class RegisterableFixedTypeTest extends \PHPUnit_Framework_TestCase
                 'class' => 'FactoryInterface',
                 'mock' => Phake::mock('Concretehouse\Component\Factory\FactoryInterface')
             ),
-            'ok_2' => array(
-                'class' => 'FactoryInjectableInterface',
-                'mock' => Phake::mock('Concretehouse\Component\Factory\FactoryInjectableInterface')
-            ),
             'ng_1' => array(
                 'class' => 'stdClass',
                 'mock' => Phake::mock('\stdClass')
@@ -59,7 +55,6 @@ class RegisterableFixedTypeTest extends \PHPUnit_Framework_TestCase
     public function returnsSpecifiedTypeOfObject()
     {
         $this->assertSame($this->list['ok_1']['mock'], $this->factory->make('ok_1'));
-        $this->assertSame($this->list['ok_2']['mock'], $this->factory->make('ok_2'));
     }
 
     /**

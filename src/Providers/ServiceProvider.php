@@ -25,9 +25,5 @@ class ServiceProvider implements \Pimple\ServiceProviderInterface
         $container["$domain.registerable"] = $container->factory(function($c) use ($domain) {
             return new Factory\Registerable($c["$domain.functions"]);
         });
-
-        $container["$domain.registerable_factory_injectable"] = $container->factory(function($c) use ($domain) {
-            return new Factory\RegisterableFactoryInjectable($c["$domain.functions"]);
-        });
     }
 }
