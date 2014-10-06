@@ -4,46 +4,8 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3d184e96603e42bdbb8682f6ffe6bc52",
+    "hash": "d512a42b330163ba77cb234ccaf1a4dc",
     "packages": [
-        {
-            "name": "concretehouse/factory-pattern",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tamakiii/factory-pattern.git",
-                "reference": "8181c0037ccb6169065af229d7ff61cf3b4c3d4d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tamakiii/factory-pattern/zipball/8181c0037ccb6169065af229d7ff61cf3b4c3d4d",
-                "reference": "8181c0037ccb6169065af229d7ff61cf3b4c3d4d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "pimple/pimple": ">=3.0"
-            },
-            "require-dev": {
-                "phake/phake": "dev-master",
-                "phpunit/phpunit": "4.2.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Concretehouse\\Dp\\Factory\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "tamakiii",
-                    "email": "tamaki.htm@gmail.com"
-                }
-            ],
-            "description": "Experimental implementation of Factory design pattern.",
-            "time": "2014-09-22 06:24:04"
-        },
         {
             "name": "pimple/pimple",
             "version": "dev-master",
@@ -98,12 +60,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "26404e0c90565b614ee76b988b9bc8790d77f590"
+                "reference": "4bdc0421209a00e6f425f4c3554d1b0df3a7e897"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/26404e0c90565b614ee76b988b9bc8790d77f590",
-                "reference": "26404e0c90565b614ee76b988b9bc8790d77f590",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/4bdc0421209a00e6f425f4c3554d1b0df3a7e897",
+                "reference": "4bdc0421209a00e6f425f4c3554d1b0df3a7e897",
                 "shasum": ""
             },
             "require": {
@@ -144,7 +106,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2014-08-25 15:09:25"
+            "time": "2014-10-05 00:20:37"
         },
         {
             "name": "phake/phake",
@@ -529,21 +491,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "3d40ae857a3941ede714be45079e85f9e956b4b3"
+                "reference": "96c5b81f9842f38fe6c73ad0020306cc4862a9e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/3d40ae857a3941ede714be45079e85f9e956b4b3",
-                "reference": "3d40ae857a3941ede714be45079e85f9e956b4b3",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/96c5b81f9842f38fe6c73ad0020306cc4862a9e3",
+                "reference": "96c5b81f9842f38fe6c73ad0020306cc4862a9e3",
                 "shasum": ""
             },
             "require": {
-                "doctrine/instantiator": "~1.0,>=1.0.1",
+                "doctrine/instantiator": "~1.0,>=1.0.2",
                 "php": ">=5.3.3",
                 "phpunit/php-text-template": "~1.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.3.*@dev"
+                "phpunit/phpunit": "4.4.*@dev"
             },
             "suggest": {
                 "ext-soap": "*"
@@ -551,7 +513,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3.x-dev"
+                    "dev-master": "2.4.x-dev"
                 }
             },
             "autoload": {
@@ -576,7 +538,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2014-09-10 14:10:18"
+            "time": "2014-10-04 10:04:20"
         },
         {
             "name": "sebastian/comparator",
@@ -853,12 +815,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "9f94dc5d8d7b49a9cb789853278af2b07a0aa4fd"
+                "reference": "499f7d7aa96747ad97940089bd7a1fb24ad8182a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/9f94dc5d8d7b49a9cb789853278af2b07a0aa4fd",
-                "reference": "9f94dc5d8d7b49a9cb789853278af2b07a0aa4fd",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/499f7d7aa96747ad97940089bd7a1fb24ad8182a",
+                "reference": "499f7d7aa96747ad97940089bd7a1fb24ad8182a",
                 "shasum": ""
             },
             "require": {
@@ -891,7 +853,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-09-17 09:54:14"
+            "time": "2014-10-05 13:53:50"
         }
     ],
     "aliases": [],
